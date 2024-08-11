@@ -1,0 +1,184 @@
+/* CSS Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: "Hanken Grotesk", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    background-color: hsl(221, 100%, 96%);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    border-radius: 1rem;
+    box-shadow: 4px 10px 20px hsl(252, 100%, 67%, .1);
+    background-color: #fff;
+    width: 40%;
+}
+
+/* Styling for result side */
+.result__side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color: #f0f0f0;
+    /* Improved contrast for readability */
+    padding: 1rem;
+    border-radius: 1rem;
+    row-gap: 2rem;
+    /* Increased spacing between elements */
+    width: 50%;
+}
+
+.score {
+    text-align: center;
+    background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsl(241, 81%, 54%));
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    width: 8rem;
+}
+
+.score p {
+    font-size: .8rem;
+    font-weight: 300;
+    opacity: .8;
+}
+
+.result__side h4 {
+    font-size: 1.5rem;
+}
+
+.result__side p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    word-spacing: 3px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Styling for summary side */
+.summary__side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.5rem;
+    width: 50%;
+    row-gap: 1.3rem;
+}
+
+.summary__side div {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    /* Increased padding inside elements */
+    border-radius: .5rem;
+    /* Light background color for readability */
+}
+
+.reaction__score {
+    background-color: hsla(0, 100%, 67%, 0.15);
+}
+
+.memory__score {
+    background-color: hsl(39, 100%, 56%, .15);
+}
+
+.verbal__score {
+    background-color: hsl(166, 100%, 37%, .15);
+}
+
+.visual__score {
+    background-color: hsl(234, 85%, 45%, .15);
+}
+
+.summary__side div h4 img {
+    vertical-align: middle;
+}
+
+.summary__side div p span {
+    opacity: .5;
+}
+
+.summary__side a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: hsl(221, 100%, 96%);
+    background-color: hsl(224, 30%, 27%);
+    padding: .8rem;
+    width: 90%;
+    border-radius: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    /* Added transition for smooth effect */
+}
+
+.summary__side a:hover {
+    background-color: hsl(241, 81%, 54%);
+    transform: scale(1.05);
+    /* Added scale effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .result__side,
+    .summary__side {
+        width: 100%;
+    }
+
+    .summary__side {
+        align-items: center;
+    }
+
+    .summary__side div,
+    .summary__side a {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 16px;
+    }
+
+    .result__side {
+        padding: .5rem;
+    }
+
+    .score {
+        font-size: 2.5rem;
+        width: 6rem;
+    }
+
+    .summary__side {
+        padding: 1rem;
+    }
+
+    .summary__side div,
+    .summary__side a {
+        font-size: 0.9rem;
+        padding: .5rem;
+    }
+}
